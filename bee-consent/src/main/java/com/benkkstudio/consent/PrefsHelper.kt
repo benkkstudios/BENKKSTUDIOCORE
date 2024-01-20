@@ -3,16 +3,14 @@ package com.benkkstudio.consent
 import android.content.Context
 import android.content.SharedPreferences
 
-@BeePrivateClass
-val Context.prefsHelper: SharedPreferences
+internal val Context.prefsHelper: SharedPreferences
     get() = getSharedPreferences(
         "BeeConsent-prefs",
         Context.MODE_PRIVATE
     )
 
-@BeePrivateClass
 @Suppress("UNCHECKED_CAST")
-inline fun <reified T : Any> SharedPreferences.get(key: String, defaultValue: T? = null): T {
+internal inline fun <reified T : Any> SharedPreferences.get(key: String, defaultValue: T? = null): T {
     return when (T::class) {
         Boolean::class -> getBoolean(key, defaultValue as? Boolean? ?: false) as T
         Float::class -> getFloat(key, defaultValue as? Float? ?: 0.0f) as T
@@ -30,9 +28,8 @@ inline fun <reified T : Any> SharedPreferences.get(key: String, defaultValue: T?
     }
 }
 
-@BeePrivateClass
 @Suppress("UNCHECKED_CAST")
-inline fun <reified T : Any> SharedPreferences.set(key: String, value: T) {
+internal inline fun <reified T : Any> SharedPreferences.set(key: String, value: T) {
     with(edit()) {
         when (T::class) {
             Boolean::class -> putBoolean(key, value as Boolean)

@@ -14,7 +14,6 @@ interface BeeConsentCallback {
     fun onRequested()
 }
 
-@OptIn(BeePrivateClass::class)
 class BeeConsent private constructor(
     val activity: Activity,
     private val debugMode: Boolean,

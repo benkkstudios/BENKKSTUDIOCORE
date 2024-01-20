@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("maven-publish")
 }
 
 android {
@@ -28,6 +29,16 @@ android {
     buildFeatures {
         viewBinding = true
         buildConfig = true
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "com.benkkstudio"
+            artifactId = "consent"
+            version = "1.1"
+        }
     }
 }
 

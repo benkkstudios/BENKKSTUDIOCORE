@@ -15,6 +15,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         getConfig()
+
         //   initAdmob()
         initMax()
     }
