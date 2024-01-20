@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("maven-publish")
 }
 
 android {
@@ -31,11 +32,32 @@ android {
     }
 }
 
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "com.benkkstudio"
+            artifactId = "max"
+            version = "0.0.2"
+            artifact("$buildDir/outputs/aar/bee-max-release.aar")
+        }
+    }
+
+    repositories {
+        maven {
+            name = "GithubPackages"
+            url = uri("https://maven.pkg.github.com/benkkstudios/BENKKSTUDIOCORE")
+            credentials {
+                username = "benkkstudios"
+                password = "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"
+            }
+        }
+    }
+}
+
+
 dependencies {
     api(project(":bee-consent"))
     implementation("com.applovin:applovin-sdk:12.1.0")
     implementation("com.google.code.gson:gson:2.10.1")
-    implementation("androidx.lifecycle:lifecycle-process:2.7.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
 }

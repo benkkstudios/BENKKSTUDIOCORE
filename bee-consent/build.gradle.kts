@@ -37,7 +37,19 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "com.benkkstudio"
             artifactId = "consent"
-            version = "1.1"
+            version = "0.0.2"
+            artifact("$buildDir/outputs/aar/bee-consent-release.aar")
+        }
+    }
+
+    repositories {
+        maven {
+            name = "GithubPackages"
+            url = uri("https://maven.pkg.github.com/benkkstudios/BENKKSTUDIOCORE")
+            credentials {
+                username = "benkkstudios"
+                password = "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"
+            }
         }
     }
 }
