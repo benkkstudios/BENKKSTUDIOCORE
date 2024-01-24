@@ -17,7 +17,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         getConfig()
 
         //   initAdmob()
-        initMax()
+        initAdmob()
     }
 
     private fun initMax() {
@@ -50,6 +50,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             .rewardId(BeeAdmob.DummyAdmob.REWARD)
             .nativeId(BeeAdmob.DummyAdmob.NATIVE)
             .withOpenAd(appInstance, BeeAdmob.DummyAdmob.OPEN)
+            .withLoading(true, 1000)
             .enableLogging(true)
             .debugMode(true)
             .request()
