@@ -48,7 +48,7 @@ publishing {
             url = uri("https://maven.pkg.github.com/benkkstudios/BENKKSTUDIOCORE")
             credentials {
                 username = "benkkstudios"
-                password = "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"
+                password = "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"
             }
         }
     }
