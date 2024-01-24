@@ -37,7 +37,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "com.benkkstudio"
             artifactId = "consent"
-            version = "0.0.2"
+            version = "0.0.3"
             artifact("$buildDir/outputs/aar/bee-consent-release.aar")
         }
     }

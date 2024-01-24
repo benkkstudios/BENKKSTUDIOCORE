@@ -37,7 +37,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "com.benkkstudio"
             artifactId = "max"
-            version = "0.0.2"
+            version = "0.0.3"
             artifact("$buildDir/outputs/aar/bee-max-release.aar")
         }
     }
