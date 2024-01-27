@@ -37,7 +37,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "com.benkkstudio"
             artifactId = "consent"
-            version = "0.0.3"
+            version = "0.0.4"
             artifact("$buildDir/outputs/aar/bee-consent-release.aar")
         }
     }
@@ -48,12 +48,12 @@ publishing {
             url = uri("https://maven.pkg.github.com/benkkstudios/BENKKSTUDIOCORE")
             credentials {
                 username = "benkkstudios"
-                password = "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"
+                password = "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"
             }
         }
     }
 }
 
 dependencies {
-    implementation("com.google.android.ump:user-messaging-platform:2.1.0")
+    api("com.google.android.ump:user-messaging-platform:2.2.0")
 }

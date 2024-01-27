@@ -37,7 +37,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "com.benkkstudio"
             artifactId = "max"
-            version = "0.0.3"
+            version = "0.0.4"
             artifact("$buildDir/outputs/aar/bee-max-release.aar")
         }
     }
@@ -48,7 +48,7 @@ publishing {
             url = uri("https://maven.pkg.github.com/benkkstudios/BENKKSTUDIOCORE")
             credentials {
                 username = "benkkstudios"
-                password = "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"
+                password = "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"
             }
         }
     }
@@ -60,7 +60,7 @@ dependencies {
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
-    implementation("com.applovin:applovin-sdk:12.1.0")
+    api("com.applovin:applovin-sdk:12.1.0")
     implementation("com.google.code.gson:gson:2.10.1")
 
 }

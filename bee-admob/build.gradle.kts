@@ -37,7 +37,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "com.benkkstudio"
             artifactId = "admob"
-            version = "0.0.3"
+            version = "0.0.4"
             artifact("$buildDir/outputs/aar/bee-admob-release.aar")
         }
     }
@@ -48,7 +48,7 @@ publishing {
             url = uri("https://maven.pkg.github.com/benkkstudios/BENKKSTUDIOCORE")
             credentials {
                 username = "benkkstudios"
-                password = "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"
+                password = "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"
             }
         }
     }
@@ -60,8 +60,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-
-    implementation("com.google.android.gms:play-services-ads:22.6.0")
-    implementation("androidx.lifecycle:lifecycle-process:2.7.0")
+    api("com.google.android.gms:play-services-ads:22.6.0")
+    api("androidx.lifecycle:lifecycle-process:2.7.0")
 
 }
